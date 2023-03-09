@@ -15,12 +15,12 @@ class M1 extends Migration
     {
         Schema::create('posts', function (Blueprint $table){
             $table->increments('id');
-            $table->string('image',50);
-            $table->string('Path');
-            $table->string('Text');
-            $table->string('Title');
+            $table->string('image');
+            $table->string('text');
+            $table->string('title');
+            $table->string('link');
             $table->timestamps();
-            });
+        });
     }
     /**
      * Reverse the migrations.
