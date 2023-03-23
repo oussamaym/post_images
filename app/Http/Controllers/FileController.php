@@ -8,6 +8,13 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\File;
 class FileController extends Controller
 {
+    public function index()
+    {
+        // all images
+        $posts = Post::all();
+        return view('welcome', compact('posts'));
+    }
+
     public function upload(Request $request)
     {
         $post=new Post;
